@@ -35,7 +35,7 @@ router.post("/characters", async (req, res, next) => {
     }
   });
   
-  // 캐릭터 상세 조회 API
+  // 캐릭터 조회 API
   router.get("/characters/:characterId", async (req, res, next) => {
     try {
       const { characterId } = req.params;
@@ -49,4 +49,4 @@ router.post("/characters", async (req, res, next) => {
       next(err);
     }
   });
-  
+  export default router;

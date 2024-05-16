@@ -1,9 +1,10 @@
 import express from 'express';
+import dotenv from 'dotenv';
 import connect from './schemas/index.js';
 import characterRouter from './routes/characters.js';
 import itemRouter from './routes/items.js';
 import errorHandler from './middleware/erroHandlerMiddleware.js';
-import router from './routes/item.js';
+import router from './routes/items.js';
 
 dotenv.config();
 
@@ -16,7 +17,7 @@ app.use(express.json());
 // 라우터 설정
 app.use('/api/characters', characterRouter);
 app.use('/api/items', itemRouter);
-app.ues('/api/index', router)
+app.use('/api/index', router);
 
 app.use(errorHandler);
 // 포트 설정 및 서버 시작
