@@ -15,7 +15,6 @@ app.use(express.json());
 // 라우터 설정
 app.use('/api/characters/', characterRouter);
 app.use('/api/items', itemRouter);
-app.use('/api/index', router);
 
 app.use(errorHandler);
 // 포트 설정 및 서버 시작
