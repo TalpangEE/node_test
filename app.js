@@ -6,8 +6,6 @@ import itemRouter from './routes/items.js';
 import errorHandler from './middleware/erroHandlerMiddleware.js';
 import router from './routes/items.js';
 
-dotenv.config();
-
 const app = express();
 connect(); // MongoDB에 연결
 
@@ -15,7 +13,7 @@ connect(); // MongoDB에 연결
 app.use(express.json());
 
 // 라우터 설정
-app.use('/api/characters', characterRouter);
+app.use('/api/characters/', characterRouter);
 app.use('/api/items', itemRouter);
 app.use('/api/index', router);
 
